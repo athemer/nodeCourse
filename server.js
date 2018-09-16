@@ -2,6 +2,8 @@ const express = require('express');
 
 const hbs = require('hbs')
 
+const port = process.env.PORT || 2800;
+
 var app = express();
 
 app.set('view ewngin', 'hbs');
@@ -29,8 +31,8 @@ app.get('/about', (request, response) => {
   })
 });
 
-app.listen(2800, () => {
+app.listen(port, () => {
 
-  console.log(' Server is up on port 2800')
+  console.log(`Server is up on port ${port}``)
 
 });
